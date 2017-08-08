@@ -103,7 +103,7 @@ int aa_audit_file(struct aa_profile *profile, struct file_perms *perms,
 {
 	int type = AUDIT_APPARMOR_AUTO;
 
-	DEFINE_AUDIT_DATA(sa, LSM_AUDIT_DATA_NONE, op);
+	DEFINE_AUDIT_DATA(sa, LSM_AUDIT_DATA_TASK, op);
 	aad(&sa)->request = request;
 	aad(&sa)->name = name;
 	aad(&sa)->target = target;
